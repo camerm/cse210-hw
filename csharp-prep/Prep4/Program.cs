@@ -15,13 +15,15 @@ class Program
             Console.WriteLine("Enter number:");
             string x = Console.ReadLine();
             userNumber = int.Parse(x);
-
+            
+            //Add in the list only the numbers diferent of 0
             if (userNumber !=0)
             {
                 numbers.Add(userNumber);
             }
         }
 
+        //Print all the list
         foreach (int number in numbers)
         {
             Console.WriteLine(number);
