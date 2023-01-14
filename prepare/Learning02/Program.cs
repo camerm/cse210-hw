@@ -11,14 +11,12 @@ class Program
         job1._company = "Walsh Peru";
         job1._startYear = 2015;
         job1._endYear = 2019;
-        job1.Display();
 
         Job job2 = new Job();
         job2._jobTitlle = "civil engineer";
         job2._company = "WSP";
         job2._startYear = 2018;
         job2._endYear = 2020;
-        job2.Display();
 
         Resume myResume = new Resume();
         myResume._name = "Oliverio Cameron";
