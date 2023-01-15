@@ -6,6 +6,7 @@ public class PromptGenerator
         int userNumber = -1;
         while (userNumber != 5)
         {
+            
             Console.WriteLine("Please Select one of the following choices:");
             string x = Console.ReadLine();
             userNumber = int.Parse(x);
