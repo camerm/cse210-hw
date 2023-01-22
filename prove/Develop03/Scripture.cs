@@ -1,7 +1,6 @@
 public class Scripture 
 {
     
-  
     private string _scripture;
     private Reference _scriptureReference;
 

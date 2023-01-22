@@ -17,7 +17,6 @@ public class Reference
     {
         //return the format of the passage
         return $"{_book} {_chapter}:{_verse}";
-        //return string.Format("{0} {1}:{2}", _book, _chapter, _verse);
     }
 
 }
