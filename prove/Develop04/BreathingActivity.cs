@@ -1,6 +1,6 @@
 using System;
 
-public class BreathingActivity
+public class BreathingActivity 
 {
     private string _breatheIn;
 
