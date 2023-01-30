@@ -1,9 +1,11 @@
 using System;
 
-public class Program
+class Program
 {
     static void Main(string[] args)
     {
+        int menuInput = 0;
+        
         list <string> menu = new list<string>
         {
         "Menu option:",
@@ -13,7 +15,7 @@ public class Program
         "4. Quit",
         };
 
-        int menuInput = 0;
+
         while (menuInput != 4)
         {
             Console.clear();

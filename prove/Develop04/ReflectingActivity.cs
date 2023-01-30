@@ -1,3 +1,5 @@
+using System;
+
 public class ReflectingActivity : Activity
 {
     private List<string> prompt;
@@ -28,5 +30,53 @@ public class ReflectingActivity : Activity
             "What did you learn about yourself through this experience?",
             "How can you keep this experience in mind in the future?",
         };
+    }
+
+    public void runActivity()
+    {
+        runActivityParentStart();
+        displayPrompt();
+        displayQuestion();
+        runActivityParentEnd();
+    }
+
+    public void displayPrompt()
+    {
+        Console.Clear();
+        Console.writeLine("Consider the following: ");
+
+        int ramdomIndex = new ramdom().Next(0, prompt.Count());
+        Console.writeLine(prompt[ramdomIndex]);
+
+        Console.writeLine("When you have something in mind, press enter to continue.");
+        Console.ReadLine();
+        
+    }
+
+    public void displayQuestion()
+    {
+        console.writeLine("Now ponder on each of the following question as they relate to this experience");
+        displayCountDown(5);
+
+        console.Clear();
+        List<int> indexes = new List<int>();
+
+        for (int i = 0, i < 4; i++)
+        {
+            int ramdomInt = new Random().Next(0, question.Count());
+            while (indexes.Contains(ramdomInt))
+            {
+                ramdomInt = new Random().Next(0, question.Count());
+            }
+            indexes.Add(ramdomInt);   
+        }
+        foreach (int index in indexes)
+        {
+            Console.writeLine(question[index]);
+            displaySpinner((userSessionLengthInput / indexes.(count())));
+            Console.writeLine();
+        }
+
+
     }
 }
