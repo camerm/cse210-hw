@@ -24,7 +24,7 @@ public class ReflectingActivity : Activity
             "Have you ever done anything like this before?",
             "How did you get started?",
             "How did you feel when it was complete?",
-            "What made this time different than other times when you were not as successful?";
+            "What made this time different than other times when you were not as successful?",
             "What is your favorite thing about this experience?",
             "What could you learn from this experience that applies to other situations?",
             "What did you learn about yourself through this experience?",
@@ -43,38 +43,38 @@ public class ReflectingActivity : Activity
     public void displayPrompt()
     {
         Console.Clear();
-        Console.writeLine("Consider the following: ");
+        Console.WriteLine("Consider the following: ");
 
-        int ramdomIndex = new ramdom().Next(0, prompt.Count());
-        Console.writeLine(prompt[ramdomIndex]);
+        int ramdomIndex = new Random().Next(0, prompt.Count());
+        Console.WriteLine(prompt[ramdomIndex]);
 
-        Console.writeLine("When you have something in mind, press enter to continue.");
+        Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
         
     }
 
     public void displayQuestion()
     {
-        console.writeLine("Now ponder on each of the following question as they relate to this experience");
+        Console.WriteLine("Now ponder on each of the following question as they relate to this experience");
         displayCountDown(5);
 
-        console.Clear();
+        Console.Clear();
         List<int> indexes = new List<int>();
 
-        for (int i = 0, i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
-            int ramdomInt = new Random().Next(0, question.Count());
+            int ramdomInt = new Random().Next(0, questions.Count());
             while (indexes.Contains(ramdomInt))
             {
-                ramdomInt = new Random().Next(0, question.Count());
+                ramdomInt = new Random().Next(0, questions.Count());
             }
             indexes.Add(ramdomInt);   
         }
         foreach (int index in indexes)
         {
-            Console.writeLine(question[index]);
-            displaySpinner((userSessionLengthInput / indexes.(count())));
-            Console.writeLine();
+            Console.WriteLine(questions[index]);
+            displaySpinner((getUserSessionLengthInput() / indexes.Count()));
+            Console.WriteLine();
         }
 
 

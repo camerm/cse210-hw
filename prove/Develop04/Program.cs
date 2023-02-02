@@ -6,7 +6,7 @@ class Program
     {
         int menuInput = 0;
         
-        list <string> menu = new list<string>
+        List <string> menu = new List<string>
         {
         "Menu option:",
         "1. Start Beathing Activity",
@@ -18,14 +18,14 @@ class Program
 
         while (menuInput != 4)
         {
-            Console.clear();
+            Console.Clear();
             foreach (string menuOption in menu)
             {
-                Console.write(menuOption);                
+                Console.Write(menuOption);                
             }
-            Console.write("Select a option from the menu");
+            Console.Write("Select a option from the menu");
             menuInput = int.Parse(Console.ReadLine());
-            Console.clear();
+            Console.Clear();
         }
 
         switch (menuInput)
