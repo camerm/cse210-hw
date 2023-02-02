@@ -6,6 +6,8 @@ public class Activity
     private string _desciptionActivity;
     private string _startingMessage;
     private string _endingMessage;
+    static int userSessionLengthInput = 0;
+    static int spinnerCounter = 0;
 
     public Activity()
     {
