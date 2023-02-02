@@ -72,9 +72,12 @@ public class Activity
         }
         Console.Write("");
     }
-    public void displayCountDown()
+    public void displayCountDown(int numSecondsToRun)
     {
-
+        for (int i = numSecondsToRun; i >=1; i--)
+        Console.WriteLine(String.Format("You may begin in: {0}, i"));
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Thread.Sleep(1000);
     }
 
 
