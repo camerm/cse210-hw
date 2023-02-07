@@ -33,7 +33,7 @@ class Program
         switch (menuInput)
         {
             case 1:
-                CreateNewGoal();
+
                 break;
             case 2:
                 Console.Clear();
@@ -48,7 +48,7 @@ class Program
                     outputFile.WriteLine(points);
                     foreach (Goal goal in goals)
                     {
-                        outputFile.WriteLine(goal);
+                        outputFile.WriteLine(goal.SaveGoal());
                     }
                 }
 
@@ -64,43 +64,44 @@ class Program
                 points = int.Parse(lines[0]);
 
                 foreach (string line in lines)
+                {
+                    if (line != lines[0])
                     {
-                        if (line != lines[0])
-                        {
-                            string[] parts = line.Split(":");
+                        string[] parts = line.Split(":");
                         
-                            string goalType = parts[0];
-                            string goalAttributes = parts[1];
+                        string goalType = parts[0];
+                        string goalAttributes = parts[1];
                              
-                            switch (goalType)
-                            {
-                                case "SimpleGoal":
+                        switch (goalType)
+                        {
+                            case "SimpleGoal":
                                     
-                                    string[] attributes = goalAttributes.Split(",");
-                                    goals.Add(new Goal());
-                                    goals[counter3].FactoryPattern(attributes);
-                                    counter3++;
-                                    break;
+                                string[] attributes = goalAttributes.Split(",");
+                                goals.Add(new Goal());
+                                goals[counter3].FactoryPattern(attributes);
+                                counter3++;
+                                break;
 
-                                case "EternalGoal":
+                            case "EternalGoal":
                                     
-                                    attributes = goalAttributes.Split(",");
-                                    goals.Add(new EternalGoal());
-                                    goals[counter3].FactoryPattern(attributes);
-                                    counter3++;
-                                    break;
+                                attributes = goalAttributes.Split(",");
+                                goals.Add(new EternalGoal());
+                                goals[counter3].FactoryPattern(attributes);
+                                counter3++;
+                                break;
                                 
-                                case "CheckListGoal":
+                            case "CheckListGoal":
                                     
-                                    attributes = goalAttributes.Split(",");
-                                    goals.Add(new CheckListGoal());
-                                    goals[counter3].FactoryPattern(attributes);
-                                    counter3++;
-                                    break;    
-                            }
+                                attributes = goalAttributes.Split(",");
+                                goals.Add(new CheckListGoal());
+                                goals[counter3].FactoryPattern(attributes);
+                                counter3++;
+                                break;    
                         }
+                    }
                         
                 }  
+                
                 counter1 += counter3;
 
                 break;

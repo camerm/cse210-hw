@@ -2,55 +2,42 @@ using System;
 
 public class Goal
 {
-    private List<string> Goal;
-    private List<string> GoalTypes;
-    private string _nameActivity;
-    static int userSessionLengthInput = 0;
+    private string _nameGoal;
+    private string _descriptionGoal;
+
 
     public Goal()
     {
-        spinnerCounter = userSessionLengthInput = 0;
+        
 
     }
 
-    public void CreateNewGoal()
+    
+    public string GetnameGoal()
     {
-        Console.WriteLine("Select a choices from the menu: ");
-
-        List <string> GoalTypes = new List<string>
-        {
-        "Menu option:",
-        "1. Simple Goal",
-        "2. Eternal Goal",
-        "3. Checklist Goal",
-        };
+        return _nameGoal;
     }
-
-    public void SaveGoal()
+    public void SetnameGoal(string nameGoal)
     {
-        Console.WriteLine("Select a choices from the menu: ");
-
-        List <string> GoalTypes = new List<string>
-        {
-        "Menu option:",
-        "1. Simple Goal",
-        "2. Eternal Goal",
-        "3. checklist Goal",
-        };
+        _nameGoal = nameGoal;
     }
 
-    public void LoadGoal()
+    public string GetdescriptionGoal()
     {
-        Console.WriteLine("Select a choices from the menu: ");
-
-        List <string> GoalTypes = new List<string>
-        {
-        "Menu option:",
-        "1. Simple Goal",
-        "2. Eternal Goal",
-        "3. checklist Goal",
-        };
+        return _descriptionGoal;
     }
+    public void SetdescriptionGoal(string descriptionGoal)
+    {
+        _descriptionGoal = descriptionGoal;
+    }
+
+
+
+    public virtual string SaveGoal()
+    {
+        return $"simple goal: {_nameGoal}, {_descriptionGoal}";
+    }
+
 
     public void RecordEvent( string nameActivity)
     {
