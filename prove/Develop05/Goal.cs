@@ -1,13 +1,13 @@
 using System;
 
-public class Goals
+public class Goal
 {
     private List<string> Goal;
     private List<string> GoalTypes;
     private string _nameActivity;
     static int userSessionLengthInput = 0;
 
-    public Goals()
+    public Goal()
     {
         spinnerCounter = userSessionLengthInput = 0;
 
