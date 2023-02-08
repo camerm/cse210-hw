@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         int menuInput = 0;
+        int puntuation = 0;
         
         List <string> menu = new List<string>
         {
@@ -21,6 +22,8 @@ class Program
         while (menuInput !=6)
         {
             Console.Clear();
+            Console.WriteLine($"You have {puntuation}points.");
+
             foreach (string menuOption in menu)
             {
                 Console.WriteLine(menuOption);                
@@ -45,7 +48,7 @@ class Program
 
                 using (StreamWriter outputFile = new StreamWriter(fileName))
                 {
-                    outputFile.WriteLine(points);
+                    outputFile.WriteLine(puntuation);
                     foreach (Goal goal in goals)
                     {
                         outputFile.WriteLine(goal.SaveGoal());
@@ -61,7 +64,7 @@ class Program
                 string[] lines = System.IO.File.ReadAllLines(fileName);
                 int counter3 = 0;
 
-                points = int.Parse(lines[0]);
+                puntuation = int.Parse(lines[0]);
 
                 foreach (string line in lines)
                 {

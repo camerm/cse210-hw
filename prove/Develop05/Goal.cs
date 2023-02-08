@@ -4,6 +4,8 @@ public class Goal
 {
     private string _nameGoal;
     private string _descriptionGoal;
+    private bool _concluded = false;
+    private int _pointsGoal;
 
 
     public Goal()
@@ -13,37 +15,57 @@ public class Goal
     }
 
     
-    public string GetnameGoal()
+    public string GetNameGoal()
     {
         return _nameGoal;
     }
-    public void SetnameGoal(string nameGoal)
+    public void SetNameGoal(string nameGoal)
     {
         _nameGoal = nameGoal;
     }
 
-    public string GetdescriptionGoal()
+    public string GetDescriptionGoal()
     {
         return _descriptionGoal;
     }
-    public void SetdescriptionGoal(string descriptionGoal)
+    public void SetDescriptionGoal(string descriptionGoal)
     {
         _descriptionGoal = descriptionGoal;
+    }
+    
+    public bool GetConcluded()
+    {
+        return _concluded;
+    }
+    public void SetConcluded(bool concluded)
+    {
+        _concluded = concluded;
+    }
+    
+    public int GetPointsGoal()
+    {
+        return _pointsGoal;
+    }
+    public void SetPointsGoal(int pointsGoal)
+    {
+        _pointsGoal = pointsGoal;
     }
 
 
 
     public virtual string SaveGoal()
     {
-        return $"simple goal: {_nameGoal}, {_descriptionGoal}";
+        return $"simple goal: {_nameGoal}, {_descriptionGoal}, {_pointsGoal}";
     }
 
 
-    public void RecordEvent( string nameActivity)
+    public virtual int RecordEvent()
     {
-        _nameActivity = nameActivity;
+        _concluded = true;
+        Console.WriteLine($"Congratulations. You have earned {_pointsGoal} points.");
+        return _pointsGoal;
     }
-    public void IsComplete( string nameActivity)
+    public void IsComplete()
     {
         _nameActivity = nameActivity;
     }
