@@ -65,8 +65,42 @@ public class Goal
         Console.WriteLine($"Congratulations. You have earned {_pointsGoal} points.");
         return _pointsGoal;
     }
-    public void IsComplete()
+    
+    //public void IsComplete()
+    //{
+    //    _nameActivity = nameActivity;
+    //}
+    
+    public virtual void QuestionsOfGoals()
     {
-        _nameActivity = nameActivity;
+        AskName();
+        AskDescription();
+        AskGoalPoints();
     }
+    protected void AskName()
+    {
+        Console.Write("What is the name of your goal?: ");
+        SetNameGoal(Console.ReadLine());
+    }
+    protected void AskDescription()
+    {
+        Console.Write("What is a short description of it?: ");
+        SetDescriptionGoal(Console.ReadLine());
+    }
+    protected void AskGoalPoints()
+    {
+        Console.Write("What is the amount of points associated with this goal?: ");
+        SetPointsGoal(int.Parse(Console.ReadLine()));
+    }
+
+
+    public virtual void FactoryPattern(string[] attributes)
+    {
+        _nameGoal = attributes[0];
+        _descriptionGoal = attributes[1];
+        _pointsGoal = int.Parse(attributes[2]);
+        _concluded = bool.Parse(attributes[3]);
+    }
+
+
 }
