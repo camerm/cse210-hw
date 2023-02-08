@@ -77,6 +77,20 @@ class Program
                 
                 case 2:
                     Console.Clear();
+
+                    string _inlist;
+                    int counter2 =1;
+
+                    Console.WriteLine("The goals are: ");
+
+                    foreach (Goal goal in goals)
+                    {
+                        _inlist = goal.MakingListGoal();
+                        Console.WriteLine($"{counter2}, {_inlist}");
+                        counter2++;
+                    }
+                    Console.Write("Press Enter to continue.");
+                    Console.ReadLine();
                     break;
                 case 3:
                     Console.WriteLine("What is the filename of your goal file?: ");

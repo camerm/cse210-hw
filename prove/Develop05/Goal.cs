@@ -102,5 +102,17 @@ public class Goal
         _concluded = bool.Parse(attributes[3]);
     }
 
+    public virtual string MakingListGoal()
+    {
+        if (_concluded)
+        {
+            return $"[X] {_nameGoal} ({_descriptionGoal})";
+        }
+        else
+        {
+            return $"[ ] {_nameGoal} ({_descriptionGoal})";
+        }
+    }
+
 
 }
