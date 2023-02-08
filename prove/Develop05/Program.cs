@@ -8,6 +8,8 @@ class Program
         int puntuation = 0;
         int counter1 = 0;
         int UserTypeGoal = 0;
+        string _inlist;
+        int counter2 = 1;
         
         List <string> menu = new List<string>
         {
@@ -78,8 +80,7 @@ class Program
                 case 2:
                     Console.Clear();
 
-                    string _inlist;
-                    int counter2 =1;
+
 
                     Console.WriteLine("The goals are: ");
 
