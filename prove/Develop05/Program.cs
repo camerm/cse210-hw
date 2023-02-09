@@ -93,6 +93,7 @@ class Program
                     Console.Write("Press Enter to continue.");
                     Console.ReadLine();
                     break;
+
                 case 3:
                     Console.WriteLine("What is the filename of your goal file?: ");
 
@@ -108,6 +109,7 @@ class Program
                     }
 
                     break;
+
                 case 4:
                     Console.WriteLine("What is the filename for the goal file?: ");
 
@@ -160,8 +162,54 @@ class Program
                     counter1 += counter3;
 
                     break;
+
                 case 5:
+                    
+                    int numberofgoals = goals.Count();
+                    int A = 1;
+                    int B = 0;
+                    bool concluded;
+
+
+                    foreach (Goal goal in goals)
+                    {
+                        concluded = goal.GetConcluded();
+                        if (concluded)
+                        {
+                            A++;
+                        }
+                    }
+                    if (B == numberofgoals)
+                    {
+                        Console.WriteLine("You have no goals record for complete.");
+                        Console.WriteLine("Press enter to return");
+                        Console.ReadKey();
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The Goals are:");
+
+
+                        foreach (Goal goal in goals)
+                        {
+                            concluded = goal.GetConcluded();
+                            if (!concluded)
+                            {
+                                Console.WriteLine($"{A}. {goal.GetNameGoal()}");   
+                            }
+                            A++;
+                        }
+                        Console.Write("Which goal do you whant to accomplish? ");
+                        int inputAnswer = int.Parse(Console.ReadLine()); 
+                        puntuation += goals[inputAnswer -1].RecordEvent();
+                        Console.WriteLine($"You now have {puntuation} points");
+                        Console.Write("Press Enter to continue.");
+                        Console.ReadLine();
+                    }
+
                     break;
+
                 case 6:
                     break;
             }
