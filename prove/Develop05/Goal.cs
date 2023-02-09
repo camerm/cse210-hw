@@ -68,7 +68,7 @@ public class Goal
     
     //public void IsComplete()
     //{
-    //    _nameActivity = nameActivity;
+    //    _nameAc = nameAc;
     //}
     
     public virtual void QuestionsOfGoals()
