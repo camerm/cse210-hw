@@ -1,13 +1,13 @@
 using System;
 public class Order
 {
-    private string _customer;
-    private List<Products> _products;
+    private Customer _customer;
+    private List<Product> _products;
 
-    public Order (string customer)
+    public Order (Customer customer)
     {
         _customer = customer;
-        _products = new List<Products>();
+        _products = new List<Product>();
     }
 
     public void TotalCost()
