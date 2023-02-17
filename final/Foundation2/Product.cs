@@ -22,4 +22,8 @@ public class Product
     {
         return _priceProduct*_quantifyProduct;
     }
+    public string GetIDProduct()
+    {
+        return _productId;
+    }
 }
