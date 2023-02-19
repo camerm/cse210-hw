@@ -1,6 +1,6 @@
 using System;
 
-class Event
+public class Events
 {
     private string _tittle;
     private string _description;
@@ -9,7 +9,7 @@ class Event
     private string _address;
     private string _type;
 
-    public Event(string tittle, string description, string date, string time, string address)
+    public Events(string tittle, string description, string date, string time, string address, string type)
     {
         _tittle = tittle;
         _description = description;
@@ -20,17 +20,22 @@ class Event
     
     }
 
+    public string GetTittle()
+    {
+        return _tittle;
+    }
+
     public string StandartDetails()
     {
-
+        return $" Details: {_tittle}, {_description},date: {_date}, Hour:{_time}. Place: {_address}.";
     }
-    public string FullDetails()
+    public virtual string FullDetails()
     {
-
+        return $" Details: {_tittle}, {_description},date: {_date}.Hour: {_time}.Place: {_address}. Event Type: {_type}";
     }
     public string ShortDetails()
     {
-
+        return $" Event Type: {_type}, Details: {_tittle}, date: {_date}.";
     }
 
 }
