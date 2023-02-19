@@ -35,7 +35,7 @@ public class Events
     }
     public string ShortDetails()
     {
-        return $" Event Type: {_type}, Details: {_tittle}, date: {_date}.";
+        return $"Event Type: {_type}\nDetails: {_tittle}\ndate: {_date}.";
     }
 
 }

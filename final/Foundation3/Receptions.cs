@@ -6,7 +6,7 @@ public class Receptions : Events
 
 
 
-    public Receptions(string tittle, string description, string date, string time, string address, string type, string RSVPemail) : base(tittle, description, date, time, type, address)
+    public Receptions(string tittle, string description, string date, string time, string address, string type, string RSVPemail) : base(tittle, description, date, time, address, type)
     {
         _RSVPemail = RSVPemail;
 

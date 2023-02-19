@@ -6,7 +6,7 @@ public class Lectures : Events
     private int _capacityLimit;
 
 
-    public Lectures(string tittle, string description, string date, string time, string address, string type, string speacker, int capacityLimit) : base(tittle, description, date, time, type, address)
+    public Lectures(string tittle, string description, string date, string time, string address, string type, string speacker, int capacityLimit) : base(tittle, description, date, time, address, type)
     {
         _speacker = speacker;
         _capacityLimit = capacityLimit;

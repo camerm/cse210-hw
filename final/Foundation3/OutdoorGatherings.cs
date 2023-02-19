@@ -6,7 +6,7 @@ public class OutdoorGatherings : Events
 
 
 
-    public OutdoorGatherings(string tittle, string description, string date, string time, string address, string type, string weather) : base(tittle, description, date, time, type, address)
+    public OutdoorGatherings(string tittle, string description, string date, string time, string address, string type, string weather) : base(tittle, description, date, time, address, type)
     {
         _weather = weather;
 
