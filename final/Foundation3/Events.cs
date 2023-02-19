@@ -27,7 +27,7 @@ public class Events
 
     public string StandartDetails()
     {
-        return $" Details: {_tittle}, {_description},date: {_date}, Hour:{_time}. Place: {_address}.";
+        return $"Details: {_tittle}\nDescription: {_description}\nDate: {_date}\nHour:{_time}\nPlace: {_address}.";
     }
     public virtual string FullDetails()
     {

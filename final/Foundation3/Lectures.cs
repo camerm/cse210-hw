@@ -15,7 +15,7 @@ public class Lectures : Events
 
     public override string FullDetails()
     {
-        return $"{base.StandartDetails()} Speacker: {_speacker}, capacity: {_capacityLimit}";
+        return $"{base.StandartDetails()}\nSpeacker: {_speacker}\nCapacity: {_capacityLimit}";
     }
 
 }
