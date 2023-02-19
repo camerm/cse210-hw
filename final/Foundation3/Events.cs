@@ -31,7 +31,7 @@ public class Events
     }
     public virtual string FullDetails()
     {
-        return $" Details: {_tittle}, {_description},date: {_date}.Hour: {_time}.Place: {_address}. Event Type: {_type}";
+        return $" Details: {_tittle}, {_description},date: {_date}. Hour: {_time}.Place: {_address}. Event Type: {_type}";
     }
     public string ShortDetails()
     {
